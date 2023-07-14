@@ -9,19 +9,27 @@ Welcome! This is a tiny form app. This project includes:
   - There's basic form validation on the **Create a New User** view
   - A user can be deleted from our database using a **delete** button on the **All Users Table**
 
+Image 1: Screenshot of the **New User Form** view
+![A screenshot of the new user form page](image.png)
+
+Imag 2: Screenshot of the **View All Users** view
+![A screenshot of the view all users page](image-1.png)
+
 ## Run this project locally
 
 In the root folder, run `yarn`.
 
 Open a cli and run `yarn start:webapp`to run the **front-end** of this cpplication (`src/client`).
 
+Go to `http://localhost:3001/` in your favorite browser to view the frontend.
+
 Open another cli and run `yarn start:server` to run the **server** of this application (`src/server`).
 
-Go to `http://localhost:3001/` in your favorite browser.
+Use `http://localhost:8000/` to make requests against the backend.
 
 ## Run App in Production Mode
 
-In order to run the web application in production mode, run `yarn start` which will automatically build and serve the frontend and backend simultaneously.
+In order to run the web application in production mode, run `yarn start` which will automatically build and serve the frontend and backend simultaneously. Then go to `http://localhost:8000/` to view the app and create / view / delete users from the UI.
 
 ## If I had more time
 
