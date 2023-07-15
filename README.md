@@ -21,15 +21,17 @@ In the root folder, run `yarn`.
 
 Open a cli and run `yarn start:webapp`to run the **front-end** of this cpplication (`src/client`).
 
-Go to `http://localhost:3001/` in your favorite browser to view the frontend.
+  * Go to `http://localhost:3001/` in your favorite browser to view the frontend.
 
 Open another cli and run `yarn start:server` to run the **server** of this application (`src/server`).
 
-Use `http://localhost:8000/` to make requests against the backend.
+  * Use `http://localhost:8000/` to make requests against the backend.
 
 ## Run App in Production Mode
 
-In order to run the web application in production mode, run `yarn start` which will automatically build and serve the frontend and backend simultaneously. Then go to `http://localhost:8000/` to view the app and create / view / delete users from the UI.
+In order to run the web application in production mode, run `yarn start` which will automatically build and serve the frontend and backend simultaneously. Then go to `http://localhost:8000/` to view the app and create / view / delete users from the UI. Wait for the yarn command to finish, you should see a screen like:
+
+![Screenshot of cli displaying what port in localhost to view app on](image-2.png)
 
 ## If I had more time
 

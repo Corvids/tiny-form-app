@@ -55,41 +55,58 @@ class Server_V1 {
 
   // GET all users
   private getUsers = (_: Request, res: Response) => {
-    res.json(this.users)
+    try {
+      res.json(this.users)
+    } catch(error) {
+      res.status(500).json({ message: 'Internal Server Error. Could not get all users.'})
+    }
   }
 
   // GET user by id
   private getUserById = (req: Request, res: Response) => {
     const userId = req.params.id
-    const user = this.users.find((user) => user.id === userId)
-
-    if (!user) {
-      res.status(404).json({ message: `User with ${userId} not found` })
-    } else {
-      res.json(user)
+    try {
+      const user = this.users.find((user) => user.id === userId)
+  
+      if (!user) {
+        res.status(404).json({ message: `User with id ${userId} not found` })
+      } else {
+        res.json(user)
+      }
+    } catch(error) {
+      res.status(500).json({ message: `Internal Server Error. Could not get user with id ${userId}.`})
     }
   }
 
   // POST a new user
   private createUser = (req: Request, res: Response) => {
-    const newUser: User = req.body
-    this.users.push(newUser)
-    this.saveUsers()
-    res.status(201).json(newUser)
+    try {
+      const newUser: User = req.body
+      this.users.push(newUser)
+      this.saveUsers()
+      res.status(201).json(newUser)
+    } catch(error) {
+      res.status(500).json({ message: 'Internal Server Error. Could not create a new user.'})
+    }
   }
 
   // DELETE a user by id
   private deleteUser = (req: Request, res: Response) => {
     const userId = req.params.id
-    const index = this.users.findIndex((user) => user.id === userId)
+    try {
+      const index = this.users.findIndex((user) => user.id === userId)
 
-    if (index === -1) {
-      res.status(404).json({ message: `User with ${userId} not found` })
-    } else {
-      const deletedUser = this.users.splice(index, 1)[0]
-      this.saveUsers()
-      res.json(deletedUser)
+      if (index === -1) {
+        res.status(404).json({ message: `User with ${userId} not found` })
+      } else {
+        const deletedUser = this.users.splice(index, 1)[0]
+        this.saveUsers()
+        res.json(deletedUser)
+      }
+    } catch(error) {
+      res.status(500).json({ message: `Internal Server Error. Could not delete user with id ${userId}.`})
     }
+
   }
 
   // helper function to load users
