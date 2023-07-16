@@ -5,7 +5,7 @@ Welcome! This is a tiny form app. This project includes:
   - GET `/v1/user/{:id}` which fetches a single user by their id
   - POST `/v1` which creates a new user and stores them in our `users.json` database
   - DELETE `/v1/user/{:id}` deletes a user by their id
-- A frontend which includes a view to **Create a New User** and **View All Users**
+- A frontend which includes a view to **Create a New User** and **View All Users**. A user can only view the table of all users if they are logged in as the admin.
   - There's basic form validation on the **Create a New User** view
   - A user can be deleted from our database using a **delete** button on the **All Users Table**
 
