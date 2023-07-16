@@ -6,6 +6,7 @@ interface IAdminLoginScreenProps {
   onLogin: (username: string, password: string) => void
 }
 
+// TODO: persist the login
 export const AdminLoginScreen: React.FC<IAdminLoginScreenProps> = ({ onLogin }) => {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')

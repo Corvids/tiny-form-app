@@ -4,6 +4,7 @@ import { User } from '../server/userModels'
 import { containerStyles, submitFormButtonStyles } from './NewUserFormStyles'
 import { v4 as uuidv4 } from 'uuid'
 
+// TODO: Center this page using styles
 export const NewUserForm: React.FC = () => {
   const [user, setUser] = useState<User>({
     id: '',
