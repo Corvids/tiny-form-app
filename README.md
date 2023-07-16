@@ -12,8 +12,17 @@ Welcome! This is a tiny form app. This project includes:
 Image 1: Screenshot of the **New User Form** view
 ![A screenshot of the new user form page](image.png)
 
-Imag 2: Screenshot of the **View All Users** view
+Image 2: Screenshot of the **View All Users** view
 ![A screenshot of the view all users page](image-1.png)
+
+Only an admin can view all users. To "log in" as admin, enter the username and password:
+
+```
+username: superuser
+password: secretpassword
+```
+
+![A screenshot of the admin log in page](image-3.png)
 
 ## Run this project locally
 

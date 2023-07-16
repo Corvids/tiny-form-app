@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
-import { NewUserForm } from './NewUserForm';
-import { AllUsersTable } from './AllUsersTable';
-import { DefaultButton, Stack } from '@fluentui/react';
-import { switchViewsButtonStyles } from './AppStyles';
+import React, { useState } from 'react'
+import { AdminView } from './AdminView'
+import { NewUserForm } from './NewUserForm'
+import { DefaultButton, Stack } from '@fluentui/react'
+import { switchViewsButtonStyles } from './AppStyles'
 
 export const App: React.FC = () => {
-  const [addUser, setAddUser] = useState(true);
+  const [addUser, setAddUser] = useState(true)
 
   const handleMenuClick = () => {
-    setAddUser(!addUser);
-  };
+    setAddUser(!addUser)
+  }
 
   return (
     <div className="App" style={{ padding: '20px' }}>
@@ -20,7 +20,7 @@ export const App: React.FC = () => {
           styles={switchViewsButtonStyles}
         />
       </Stack>
-      {addUser ? <NewUserForm /> : <AllUsersTable />}
+      {addUser ? <NewUserForm /> : <AdminView />}
     </div>
-  );
-};
+  )
+}
