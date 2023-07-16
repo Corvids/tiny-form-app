@@ -1,7 +1,7 @@
 import { createTheme } from '@fluentui/react'
 
 // Import the Roboto font
-import 'typeface-roboto';
+import 'typeface-roboto'
 
 // Create a Fluent UI theme with Roboto font
 const theme = createTheme({

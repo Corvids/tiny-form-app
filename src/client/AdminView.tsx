@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { AdminLoginScreen } from './AdminLogin';
-import { AllUsersTable } from './AllUsersTable';
+import React, { useState } from 'react'
+import { AdminLoginScreen } from './AdminLogin'
+import { AllUsersTable } from './AllUsersTable'
 
 export const AdminView: React.FC = () => {
   const [isAdminLoggedIn, setAdminLoggedIn] = useState(false)

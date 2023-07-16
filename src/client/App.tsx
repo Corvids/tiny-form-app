@@ -13,6 +13,7 @@ export const App: React.FC = () => {
 
   return (
     <div className="App" style={{ padding: '20px' }}>
+      {/* TODO: create a nav bar UI */}
       <Stack horizontal>
         <DefaultButton
           text={addUser ? 'View All Users' : 'Create New User'}
