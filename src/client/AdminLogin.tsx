@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { PrimaryButton, TextField, Stack, MessageBar, MessageBarType } from '@fluentui/react'
-import { buttonStyles, messageBarStyles } from './AdminLoginStyles'
+import { buttonStyles, containerStyles, messageBarStyles, textFieldStyles } from './AdminLoginStyles'
 
 interface IAdminLoginScreenProps {
   onLogin: (username: string, password: string) => void
@@ -33,26 +33,34 @@ export const AdminLoginScreen: React.FC<IAdminLoginScreenProps> = ({ onLogin }) 
     }
   }
 
+
   return (
-    <Stack verticalAlign="center" horizontalAlign="center" tokens={{ childrenGap: 10 }} style={{ height: '100vh' }}>
-      <h3> Log in as Admin to View all Users</h3>
+    <Stack
+      verticalAlign="start"
+      horizontalAlign="start"
+      tokens={{ childrenGap: 10 }}
+      style={{ height: '100vh', padding: '20px' }}
+    >
+      <h3>Log in as Admin to View all Users</h3>
       <TextField
         label="Username"
         value={username}
         onChange={(e, newValue) => setUsername(newValue || '')}
+        styles={textFieldStyles}
       />
       <TextField
         label="Password"
         type="password"
         value={password}
         onChange={(e, newValue) => setPassword(newValue || '')}
+        styles={textFieldStyles}
       />
       {errorMessage && (
         <MessageBar messageBarType={errorType} styles={messageBarStyles}>
           {errorMessage}
         </MessageBar>
       )}
-      <PrimaryButton text="Login" onClick={handleLogin} styles={buttonStyles}/>
+      <PrimaryButton text="Login" onClick={handleLogin} styles={buttonStyles} />
     </Stack>
   )
 }

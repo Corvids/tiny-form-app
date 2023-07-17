@@ -1,9 +1,12 @@
 import { IButtonStyles } from "@fluentui/react"
 
+export const containerStyles = {
+  padding: '20px'
+}
+
 export const switchViewsButtonStyles: IButtonStyles = {
   root: {
     color: '#fff',
-    backgroundColor: '#B5838D',
     outlineColor: '#B5838D',
   },
 }

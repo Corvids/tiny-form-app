@@ -9,13 +9,15 @@ Welcome! This is a tiny form app. This project includes:
   - There's basic form validation on the **Create a New User** view
   - A user can be deleted from our database using a **delete** button on the **All Users Table**
 
-Image 1: Screenshot of the **New User Form** view
+**Image 1:** Screenshot of the **New User Form** view
+
 ![A screenshot of the new user form page](image.png)
 
-Image 2: Screenshot of the **View All Users** view
+**Image 2:** Screenshot of the **View All Users** view
+
 ![A screenshot of the view all users page](image-1.png)
 
-Only an admin can view all users. To "log in" as admin, enter the username and password:
+Only an admin can view all users. To log in as admin, enter the username and password:
 
 ```
 username: superuser
@@ -28,13 +30,11 @@ password: secretpassword
 
 In the root folder, run `yarn`.
 
-Open a cli and run `yarn start:webapp`to run the **front-end** of this cpplication (`src/client`).
+Open a cli and run `yarn start:webapp`to run the **front-end** of this cpplication (`src/client`):
+  - Go to `http://localhost:3001/` in your favorite browser to view the frontend.
 
-  * Go to `http://localhost:3001/` in your favorite browser to view the frontend.
-
-Open another cli and run `yarn start:server` to run the **server** of this application (`src/server`).
-
-  * Use `http://localhost:8000/` to make requests against the backend.
+Open another cli and run `yarn start:server` to run the **server** of this application (`src/server`):
+  - Use `http://localhost:8000/` to make requests against the backend.
 
 ## Run App in Production Mode
 
